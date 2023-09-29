@@ -1,0 +1,764 @@
+@import "nullstyle.scss";
+
+/*------------------------------------------------обнуляйщии стили----------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+/*------------------------------------------------шрифты----------------------------------------------------------*/
+
+
+body{
+	background: #221F2C;
+	font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container{
+	max-width: 1066px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+// header и его блоки
+.link {
+	display: block;
+	color: #FFF;
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 36px; 
+	align-self: center;
+
+	&:hover{
+		color: #A67AFD;
+	} 
+}
+
+.header {
+	position: fixed;
+	z-index: 50;
+	width: 100%;
+	padding: 30px 0;
+	background: linear-gradient(270deg, rgba(34, 31, 44, 0.00) 0%, #221F2C 19.16%, #221F2C 48.88%, #221F2C 82.18%, rgba(34, 31, 44, 0.00) 100%);
+	&:after {
+	content: "";
+	display: block;
+	height: 1.5px;
+	background-image: linear-gradient(90deg, rgba(180, 183, 255, 0.00) 0%, #B4B7FF 48.37%, rgba(180, 183, 255, 0.00) 100%);
+	position: absolute;
+ 	bottom: 0px; 
+  	left: 0; 
+  	right: 0; 
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__left {
+		display: flex;
+		gap: 3.75rem; 
+	}
+	&__log img {
+		max-width: 45px;
+		max-height: 45px;
+		align-self: center
+	}
+	&__right {
+		display: flex;
+		gap: 1.875rem;
+	}
+	&__lang {
+		align-self: center ;
+	}
+	&__switch {
+		align-self: center
+	}
+	&__sign {
+		padding: 10px 36px;
+		color: #A67AFD;
+		font-family: Poppins;
+		font-size: 16px;
+		font-weight: 700;
+		border-radius: 8px;
+		border: 2px solid #A67AFD;
+		transition-duration: 750ms;
+		&:hover{
+			background-color: #A67AFD;
+			color: white;
+		}
+
+
+	}
+	&__reg {
+		color: #FFF;
+		text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+		font-family: Poppins;
+		font-size: 16px;
+		font-weight: 700;
+		padding: 10px 30px;
+		background: linear-gradient(90deg, #8750F3 0.08%, #89A2FB 49.24%, #5ED3D0 97.67%); 
+		border-radius: 10px;
+		transition-duration: 700ms;
+
+		&:hover{
+			background: linear-gradient(270deg, #8750F3 0.07%, #A87BFF 97.67%);;
+		}
+	}
+}
+
+/* Мобильный адаптив */
+.header-mobile {
+	display: none;
+	width: 100%;
+	&__row {
+		display: flex;
+		justify-content: space-around;
+	}
+}
+/* Мобильный адаптив */
+
+
+// /header и его блоки
+
+
+
+// первая страница и его блоки
+.btn {
+		display: block;	
+		width: 15rem;
+		height: 4.5rem;
+		color: white;
+		font-size: 1.25rem;
+		font-family: Poppins;
+		font-weight: 700;
+		padding: 1.47rem;
+		text-align: center;
+		text-shadow: 0px 1px 3px rgba(65, 51, 153, 0.25);
+		background: linear-gradient(90deg, #5ED3D0 0%, #83A4F6 51%, #8750F3 100%); box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.25); border-radius: 16px;
+		transition-duration: 1s;
+
+		&:hover{
+		transform: scale(0.95);
+		box-shadow: 0 0 10px 1px rgba(127, 255, 212, 0.5);
+	}
+		
+	}	
+
+.text{
+	color: #FFF;
+	font-family: Poppins;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.875rem; 
+}
+.title {
+	color: #FFF;
+	font-family: Poppins;
+	font-size: 2.5rem;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 3.125rem; /* 125% */
+}
+.row{
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+.first {
+	 padding :6.57rem 0 12.19rem 11.5rem;
+	 margin-top: 6.5rem;
+	 position: relative;
+	 overflow: hidden;
+	 background: linear-gradient(180deg, rgba(34, 31, 44, 0.00) 9.5%, rgba(34, 31, 44, 0.90) 59.56%, #221F2C 76.67%, #221F2C 99.86%);
+	 /* ! Тут я хотел создать фон изображения, через псведокласс и привязать через position:absolute Но не получилось */
+	 &:after{
+	 	margin-left: 0 ;
+	 	margin-top: 0;
+	 	content: "";
+	   position: absolute;
+	   width: 200%;
+	   height: 200%;
+	   top: 110%;
+	   left: 34%;
+
+	   z-index: -1;
+	 	background: url("../../img/items.png") 0 0 no-repeat ;
+	 	transform: rotate(30deg);
+	 	background-origin: padding-box;         
+	 }
+	 
+	&__row {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+	}
+
+
+	&__title {
+		color: white;
+		font-size: 3.5rem;  
+		font-family: Poppins;
+		font-weight: 600	;
+		line-height: 3.875rem; 
+		word-wrap: break-word;
+
+		& span{
+			background: linear-gradient(90deg, #5ED3D0 0%, #8750F3 40.87%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+	&__subtitle {
+		color: white;
+		font-size: 1.5rem;
+		font-family: Poppins;
+		font-weight: 500;
+		line-height: 4.625rem;
+		word-wrap: break-word;
+		margin-bottom: 5.44rem;
+
+	} 	
+}
+// /первая страница и его блоки
+
+
+// Вторая страница и его блоки
+.seconde {
+	padding: 8.8125rem 0 7.81rem 0; 
+	position: relative;
+	overflow: hidden;
+	&:after{
+	 	margin-left: 0 ;
+	 	margin-top: 0;
+	 	content: "";
+	   position: absolute;
+	   width: 100%;
+	   height: 100%;
+	   top: 10%;
+	   left: 10%;
+	   z-index: -1;
+	   background: url(../../img/phone.png)0 0 no-repeat;
+	}
+
+	&__img{
+	}
+	&__row {	
+		align-items: flex-end;
+	}
+	&__body{
+		max-width: 31.1875em;
+	}
+	&__text {
+		margin-top: 40px;
+	}
+	&__btn {
+		margin-right: 17rem;
+	}
+}
+// /Вторая страница и его блоки
+
+
+// третья страница и его блоки
+
+/*Тут я не смог сделать елки через, svg*/
+.third {
+	background: linear-gradient(270deg, #5ED3D0 46.74%, #89A2FB 100%),;
+	padding: 4.69rem 0;
+
+	&__row{
+		background-color: #221F2C;
+		display: flex;
+		justify-content: space-between;
+		border-radius: 0.75rem;
+		padding: 4rem 4rem 0 4rem;
+	}
+	&__title{
+		color: #FFF;
+		font-family: Poppins;
+		font-size: 2.25rem;
+		font-weight: 800;
+		line-height: 2.875rem; 
+		max-width: 35.375rem;
+	}
+	&__card {
+		display: flex; 
+		flex: 1 0 20rem;
+		background: url(../../img/card.jpeg), lightgray 50% / cover no-repeat;
+		max-width: 20rem;
+		border-radius: 0.75rem;
+		justify-content: space-between;
+		height:12.5rem;
+		transform: translate(5rem, -2rem) rotate(30deg);
+
+	}
+	&__card-body{
+		align-self: flex-end;
+		margin: 0 0 1rem 1rem  ;
+	}
+	&__name {
+		font-family: Lalezar;
+		font-size: 1.5rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 1rem; 
+		background: linear-gradient(90deg, #5FD1D1 9.56%, #89A2FB 93.24%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		mix-blend-mode: difference;
+
+	
+	}
+	&__post {
+		font-family: Poppins;
+		font-size: 0.75rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 1rem; /* 133.333% */
+		background: linear-gradient(90deg, #5FD1D1 9.56%, #89A2FB 93.24%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		mix-blend-mode: difference;
+	}
+	&__logo{
+		margin: 1rem 1rem 0 0 ;
+	}
+	&__logo img {
+		max-width: 3.15381rem;
+		max-height:3.15381rem ;
+		
+	}
+}
+// /третья страница и его блоки
+
+
+// четвертая страница
+.fourth {
+	padding: 8.8125rem 0 7.81rem 0; 
+	&__row {}
+	&__body {
+		max-width: 31.1875em;
+	}
+	&__title {}
+	&__text {
+		margin-top: 2.5rem;
+	}
+	&__btn {}
+}
+// /четвертая страница
+
+
+// пятая страница
+.fifth {
+	padding: 8.8125rem 0 7.81rem 0; 
+	&__title {
+		text-align: center;
+		max-width: 31.1875em;
+		margin-bottom: 3.125rem;
+	}
+	&__row {
+		align-items: flex-end;
+	}
+	&__body {
+		max-width: 31.1875em;
+	}
+	&__btn {
+		margin-right: 17rem;
+	}
+}
+// /пятая страница
+
+
+// шестая страница
+.sixth {
+	padding: 8.8125rem 0 7.81rem 0; 
+	&__body {
+		max-width: 31.1875em;
+	}
+	&__text {
+		margin-top: 40px;
+	}
+}
+// /шестая страница
+
+
+// седьмая страница
+.seventh {
+	padding: 8.8125rem 0 7.81rem 0; 
+	&__title {
+		text-align: center;
+		max-width: 31.1875em;
+		margin-bottom: 3.125rem;
+	}
+	&__row {
+		align-items: flex-end;
+	}
+	&__body {
+		max-width: 31.1875em;
+	}
+	&__btn {
+		margin-right: 17rem;
+	}
+}
+// /седьмая страница
+.eighth {
+	padding: 8.8125rem 0 7.81rem 0;
+	&__title {
+		text-align: center;
+	}
+	&__row {
+		display: flex;
+	}
+	&__text {
+		max-width: 52.375rem;
+		text-align: center;
+		align-self: center;
+		margin-top: 2.5rem;
+	}
+	&__btn {
+		align-self: center;
+		margin-top:21rem ;
+	}
+}
+
+// страница с вопросом
+.faq {
+	padding: 8.8125rem 0 7.81rem 0;
+	&__title {
+		margin-bottom: 2rem;
+	}
+	&__row {
+		display: flex;
+		flex-direction: column;
+	}
+	&__question {}
+}
+
+
+// Тут я написал css на выдвижной ответ при нажатие, но не смог написать js файл на vue
+.question {
+	background: url(../../img/+.svg)  right center no-repeat;
+
+	&:after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 1.01%, #FFF 52.57%, rgba(255, 255, 255, 0.00) 100%);
+	}
+	&__header {
+	display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+	}
+	&__title {
+	color: #FFF;
+	font-family: Poppins;
+	font-size: 1.5rem;
+	font-weight: 800;
+	line-height: 3rem; /* 200% */
+	margin: 1.5rem 0;
+	}
+	&__content {
+	display: none;
+  	padding: 10px;
+	}
+	&__text {
+	color: #FFF;
+	font-family: Poppins;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.5rem; /* 150% */
+	}
+	&.active .question__content{
+		display: block;
+	}
+}
+
+.inpt{
+	border-radius: 0.375rem;
+	background: #393547;
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+	color: rgba(255, 255, 255, 0.70);
+	font-family: Poppins;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.125rem; /* 112.5% */
+	padding: 1.19rem;
+	&::placeholder {
+	color: rgba(255, 255, 255, 0.70);
+	font-family: Poppins;
+	font-size: 1rem;
+	text-align: left;
+	font-weight: 500;
+	line-height: 1.125rem; /* 112.5% */
+
+}
+}
+// /страница с вопросом
+
+
+// страница с контактами
+
+.contact {
+	padding: 8.8125rem 0 7.81rem 0;
+	&__title {
+		text-align: center;
+		margin-bottom: 3.75rem;
+	}
+	&__row {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+	&__name {}
+	&__email {}
+	&__message {
+		padding-bottom: 14.5rem;
+		margin-bottom: 3.4rem;
+	}
+	&__btn {
+		margin: 0 auto;
+	}
+}
+// /страница с контактами
+
+
+/* адаптив под планшеты */
+@media (max-width:768px) {
+	.header__left,.header__right{
+		gap: 12px;
+	}
+
+	.link{
+		font-size: 13px;
+	}
+
+	.header{
+		&__sign{
+			font-size: 13px;
+			padding: 10px 30px;
+		}
+
+		&__reg{
+			font-size: 13px;
+		}
+	}
+
+	.first__title{
+		font-size: 3rem;
+
+	}
+}
+/* адаптив под маленькие мониторы*/
+
+
+/* Мобильный адаптив */
+@media (max-width: 576px) {
+		html{
+			font-size: 8px;
+		}
+
+		.container{
+			max-width: 576px;
+
+		}
+		.header{
+			&__left,&__right{
+				display: none;
+			}
+			&__mobile{
+				display: block;
+			}
+		}
+		.btn{
+		width: 185px;
+		border-radius: 8px;
+		margin: 0 auto;
+		}
+
+		.first{
+			padding-left: 0;
+			&__title, &__subtitle{
+				text-align: center;
+				white-space: nowrap;
+			}
+			&__btn{
+				margin: 0 auto;
+				margin-top: 341px;
+			}
+			&:after{
+		   top: -10%;
+		   left: -60%;
+		   transform: rotate(30deg) scale(0.8);
+		}
+	} 
+
+		.seconde{
+			&__body{
+				text-align: center;
+				max-width: 308px;
+				margin: 0 auto;
+			}
+			&__btn{
+				margin-top: 305px;
+			}
+
+			&__text{
+				margin-top: 26px;
+				max-width: 288px;
+				color: #FFF;
+				font-size: 14px;
+				line-height: 20px; /* 142.857% */
+			}
+			&:after{
+				height: 200%;
+				width: 200%;
+			   top: 3%;
+			   left: -55%;
+			   transform: scale(0.58);
+			}
+	}	
+
+		.third{
+			&__row{
+				padding: 2rem 0 2rem 2rem;
+			}
+
+			&__card{
+				transform: translate(2rem, -2rem) rotate(30deg);
+			}
+		}
+
+		.fourth{
+			&__title{
+				text-align: center;
+				max-width: 308px;
+				margin: 0 auto;
+			}
+			&__text{
+				max-width: 288px;
+				color: #FFF;
+				font-size: 14px;
+				line-height: 20px;
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 305px;
+			}
+		}
+
+		.fifth{
+			&__title{
+				text-align: center;
+				max-width: 308px;
+				margin: 0 auto;
+			}
+			&__row{
+				align-items: flex-start;
+			}
+			&__btn{
+				margin: 0 auto;
+			}
+			&__body{
+				margin: 0 auto;
+			}
+			&__text{
+				max-width: 288px;
+				font-size: 14px;
+				line-height: 20px;
+				text-align: center;
+				margin-top: 305px;
+			}
+		}
+
+		.sixth{
+			&__title{
+				text-align: center;
+				max-width: 308px;
+				margin: 0 auto;
+			}
+			&__row{
+				align-items: flex-start;
+			}
+			&__btn{
+				margin: 0 auto;
+			}
+			&__body{
+				margin: 0 auto;
+			}
+			&__text{
+				max-width: 288px;
+				font-size: 14px;
+				line-height: 20px;
+				text-align: center;
+				margin-top: 305px;
+			}
+		}
+
+		.seventh{
+			&__title{
+				text-align: center;
+				max-width: 308px;
+				margin: 0 auto;
+			}
+			&__row{
+				align-items: flex-start;
+			}
+			&__btn{
+				margin: 0 auto;
+			}
+			&__body{
+				margin: 0 auto;
+			}
+			&__text{
+				max-width: 288px;
+				font-size: 14px;
+				line-height: 20px;
+				text-align: center;
+				margin-top: 305px;
+			}
+		}	
+
+		.eighth{
+			&__title{
+				text-align: center;
+				max-width: 308px;
+				margin: 0 auto;
+			}
+			&__row{
+				align-items: flex-start;
+			}
+			&__btn{
+				margin: 0 auto;
+			}
+			&__body{
+				
+			}
+			&__text{
+				max-width: 288px;
+				font-size: 14px;
+				line-height: 20px;
+				text-align: center;
+
+				margin-top: 305px;
+			}
+		}
+
+		.contact__btn{
+			margin-top: 30px;
+		}
+		.inpt{
+			margin: 0 30px;
+		}	
+}
+/* Мобильный адаптив */
