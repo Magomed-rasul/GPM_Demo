@@ -189,7 +189,7 @@ body{
 	   left: 34%;
 
 	   z-index: -1;
-	 	background: url("../../img/items.png") 0 0 no-repeat ;
+	 	background: url("../img/items.png") 0 0 no-repeat ;
 	 	transform: rotate(30deg);
 	 	background-origin: padding-box;         
 	 }
@@ -245,7 +245,7 @@ body{
 	   top: 10%;
 	   left: 10%;
 	   z-index: -1;
-	   background: url(../../img/phone.png)0 0 no-repeat;
+	   background: url(../img/phone.png)0 0 no-repeat;
 	}
 
 	&__img{
@@ -291,7 +291,7 @@ body{
 	&__card {
 		display: flex; 
 		flex: 1 0 20rem;
-		background: url(../../img/card.jpeg), lightgray 50% / cover no-repeat;
+		background: url(../img/card.jpeg), lightgray 50% / cover no-repeat;
 		max-width: 20rem;
 		border-radius: 0.75rem;
 		justify-content: space-between;
@@ -446,7 +446,7 @@ body{
 
 // Тут я написал css на выдвижной ответ при нажатие, но не смог написать js файл на vue
 .question {
-	background: url(../../img/+.svg)  right center no-repeat;
+	background: url(../img/+.svg)  right center no-repeat;
 
 	&:after {
   content: "";
